@@ -1,0 +1,15 @@
+{
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    ["@sebbo2002/semantic-release-jsr", {
+      "cwd": "./packages/api",
+      "pkgJsonPath": "./package.json",
+      "publishArgs": [
+        "--allow-slow-types"
+      ]
+    }]
+  ]
+}
