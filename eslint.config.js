@@ -7,6 +7,6 @@ export default [
     },
   },
   {
-    ignores: [".next/*", "public/*"],
+    ignores: [".next/*", "public/*", "packages/api/*"],
   },
 ];
