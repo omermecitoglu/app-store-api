@@ -4,10 +4,13 @@ import generateOpenApiSpec from "@omer-x/next-openapi-json-generator";
 import { NotificationDTO } from "../src/models/notification.ts";
 // @ts-expect-error: whatever?
 import { SubscriptionDTO } from "../src/models/subscription.ts";
+// @ts-expect-error: whatever?
+import { TransactionDTO } from "../src/models/transaction.ts";
 
 (async () => {
   const spec = await generateOpenApiSpec({
     NotificationDTO,
+    TransactionDTO,
     SubscriptionDTO,
   });
   await writeFile("./openapi.json", JSON.stringify(spec), "utf-8");
