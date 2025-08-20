@@ -15,6 +15,8 @@ export const NotificationDTO = z.object({
     "DID_CHANGE_RENEWAL_PREF:UPGRADE", // Customer upgrades a subscription within the same subscription group.
     "DID_CHANGE_RENEWAL_PREF:DOWNGRADE", // Customer downgrades a subscription within the same subscription group.
     "DID_CHANGE_RENEWAL_STATUS", // Customer canceled the subscription after receiving a price increase notice or a request to consent to a price increase.
+    "DID_CHANGE_RENEWAL_STATUS:AUTO_RENEW_DISABLED", // Customer cancels the subscription from the App Store Subscriptions settings page.
+    "DID_CHANGE_RENEWAL_STATUS:AUTO_RENEW_ENABLED", // Customer subscribes again after canceling a subscription, which reenables auto-renew.
     "EXPIRED:VOLUNTARY", // The subscription expires because the customer chose to cancel it.
     "EXPIRED:BILLING_RETRY", // The subscription expires because the billing retry period ends without recovering the subscription.
     "EXPIRED:PRODUCT_NOT_FOR_SALE", // The subscription expires because the developer removed the subscription from sale and the renewal fails.
