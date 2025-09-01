@@ -12,7 +12,7 @@ export const { GET } = defineRoute({
   description: "Retrieve details of a specific subscription by their ID",
   tags: ["Subscriptions"],
   pathParams: z.object({
-    id: z.number().describe("ID of the subscription"),
+    id: z.coerce.number<string>().describe("ID of the subscription"),
   }),
   action: async ({ pathParams }) => {
     const subscriptionId = `${pathParams.id}`;
